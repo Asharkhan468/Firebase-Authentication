@@ -1,6 +1,6 @@
 # Firebase Authentication
 
-![Firebase](https://logowik.com/content/uploads/images/firebase5601.logowik.com.webp)
+<img src="https://firebase.google.com/images/social.png" alt="Firebase" width="200" height="100">
 
 This repository provides a comprehensive implementation of Firebase Authentication, designed to seamlessly integrate user authentication into web and mobile applications.
 
