@@ -1,4 +1,9 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
 
 import { auth } from "./config.js";
 
@@ -20,3 +25,33 @@ form.addEventListener("submit", (event) => {
       alert(`${errorMessage}`)
     });
 });
+
+
+
+
+//Login with google btn functionality
+
+const googleLogin = document.querySelector(".google-login-btn");
+
+const provider = new GoogleAuthProvider();
+
+googleLogin.addEventListener('click' , ()=>{
+
+  
+signInWithPopup(auth, provider)
+  .then((result) => {
+  
+    const user = result.user;
+    console.log(user);
+    window.location="home.html"
+    
+  })
+  .catch((error) => {
+    const errorMessage = error.message;
+    console.log(errorMessage);
+    // ...
+  });
+
+})
+
+
