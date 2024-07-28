@@ -9,7 +9,7 @@ import {
 import { auth } from "./config.js";
 
 const email = document.querySelector("#email");
-const password = document.querySelector("#Password");
+const password = document.querySelector("#password");
 const form = document.querySelector("#form");
 
 form.addEventListener("submit", (event) => {
@@ -81,3 +81,23 @@ GitHubLogin.addEventListener('click' , ()=>{
     });
 
 })
+
+
+//Email password functionallty
+
+document
+  .getElementById("toggle-password")
+  .addEventListener("click", function () {
+    const passwordField = document.getElementById("password");
+    const eyeIcon = document.querySelector("#toggle-password i");
+
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      eyeIcon.classList.remove("fa-eye");
+      eyeIcon.classList.add("fa-eye-slash");
+    } else {
+      passwordField.type = "password";
+      eyeIcon.classList.remove("fa-eye-slash");
+      eyeIcon.classList.add("fa-eye");
+    }
+  });
