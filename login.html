@@ -86,6 +86,54 @@ body {
     margin-right: 10px;
 }
 
+
+/*Login with Github*/
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.github-login-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.github-login-btn:hover {
+    background-color: #000;
+    transform: scale(1.05);
+}
+
+.github-login-btn:active {
+    background-color: #000;
+    transform: scale(0.95);
+}
+
+.github-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -106,6 +154,17 @@ body {
             <span>Login with Google</span>
         </button>
     </div>
+
+
+     <div class="login-container">
+        <button class="github-login-btn">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" class="github-icon">
+            <span>Login with GitHub</span>
+        </button>
+    </div>
+
+
+   
     <a href="./index.html">Not a User?</a>
     
    <script type="module" src="login.js"></script> 

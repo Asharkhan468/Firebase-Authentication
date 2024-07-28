@@ -2,6 +2,7 @@ import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
+  GithubAuthProvider,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 
 
@@ -33,12 +34,12 @@ form.addEventListener("submit", (event) => {
 
 const googleLogin = document.querySelector(".google-login-btn");
 
-const provider = new GoogleAuthProvider();
+const providerGoogle = new GoogleAuthProvider();
 
 googleLogin.addEventListener('click' , ()=>{
 
   
-signInWithPopup(auth, provider)
+signInWithPopup(auth, providerGoogle)
   .then((result) => {
   
     const user = result.user;
@@ -55,3 +56,28 @@ signInWithPopup(auth, provider)
 })
 
 
+
+
+//Login with github
+
+
+const GitHubLogin = document.querySelector(".github-login-btn");
+
+const providerGitHub = new GithubAuthProvider();
+
+GitHubLogin.addEventListener('click' , ()=>{
+
+  signInWithPopup(auth, providerGitHub)
+    .then((result) => {
+      const user = result.user;
+      console.log(user);
+      window.location='home.html'
+     
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+      
+    });
+
+})
