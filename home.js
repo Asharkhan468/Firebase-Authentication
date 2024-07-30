@@ -26,11 +26,18 @@ const logOutBtn = document.querySelector("#logoutBtn");
 const userImage = document.getElementById("user-image");
 const userName = document.getElementById("user-name");
 
+//profile
+
+const userProfile = document.querySelector('#modal-user-image');
+const userDisplayName= document.querySelector('#modal-user-name')
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
     let userPhoto= user.photoURL
    userImage.src=`${userPhoto}`;
    userName.innerHTML=`${user.displayName}`
+   userProfile.src = `${userPhoto}`
+   userDisplayName.innerHTML = `${user.displayName}`
   } else {
    window.location="login.html"
   }
