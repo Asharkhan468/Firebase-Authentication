@@ -36,15 +36,17 @@ const googleLogin = document.querySelector(".google-login-btn");
 
 const providerGoogle = new GoogleAuthProvider();
 
+export let user
+
 googleLogin.addEventListener('click' , ()=>{
 
   
 signInWithPopup(auth, providerGoogle)
   .then((result) => {
   
-    const user = result.user;
-    console.log(user);
+     user = result.user;
     window.location="home.html"
+
     
   })
   .catch((error) => {
@@ -83,21 +85,3 @@ GitHubLogin.addEventListener('click' , ()=>{
 })
 
 
-//Email password functionallty
-
-document
-  .getElementById("toggle-password")
-  .addEventListener("click", function () {
-    const passwordField = document.getElementById("password");
-    const eyeIcon = document.querySelector("#toggle-password i");
-
-    if (passwordField.type === "password") {
-      passwordField.type = "text";
-      eyeIcon.classList.remove("fa-eye");
-      eyeIcon.classList.add("fa-eye-slash");
-    } else {
-      passwordField.type = "password";
-      eyeIcon.classList.remove("fa-eye-slash");
-      eyeIcon.classList.add("fa-eye");
-    }
-  });
