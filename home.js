@@ -28,8 +28,8 @@ const userName = document.getElementById("user-name");
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    const uid = user.uid;
-   userImage.src=`${user.photoURL}`;
+    let userPhoto= user.photoURL
+   userImage.src=`${userPhoto}`;
    userName.innerHTML=`${user.displayName}`
   } else {
    window.location="login.html"
