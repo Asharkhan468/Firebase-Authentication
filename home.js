@@ -12,6 +12,8 @@ import {
   updateDoc,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
+import {auth , db} from './config.js'
+
 
 
 //Firestore some cdn
@@ -27,7 +29,6 @@ const userName = document.getElementById("user-name");
 
 const userProfile = document.querySelector("#modal-user-image");
 const userDisplayName = document.querySelector("#modal-user-name");
-const auth = getAuth();
 
 onAuthStateChanged(auth, (user) => {
   if (user) {

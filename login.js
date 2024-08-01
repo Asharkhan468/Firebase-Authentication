@@ -5,13 +5,15 @@ import {
   GithubAuthProvider,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 
+import {auth} from './config.js'
 
-// import { auth } from "./config.js";
+
 
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const form = document.querySelector("#form");
-const auth = getAuth();
+
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   signInWithEmailAndPassword(auth, email.value, password.value)
