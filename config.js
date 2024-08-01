@@ -8,13 +8,13 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.4/firebas
 //Firestore cdns
 
  const firebaseConfig = {
-   apiKey: process.env.FIREBASE_API_KEY,
-   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-   projectId: process.env.FIREBASE_PROJECT_ID,
-   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-   appId: process.env.FIREBASE_APP - ID,
-   measurementId: process.env.FIREBASE_MEASUREMENT - ID,
+   apiKey: "AIzaSyCxVDP6qSZt5e3qdAyKYEf5YwFa4HFsHtM",
+   authDomain: "fir-authentication-956b7.firebaseapp.com",
+   projectId: "fir-authentication-956b7",
+   storageBucket: "fir-authentication-956b7.appspot.com",
+   messagingSenderId: "556321944730",
+   appId: "1:556321944730:web:f2524902c7a708f7565b23",
+   measurementId: "G-FHLZP4ZN7C",
  };
 
 // Initialize Firebase
