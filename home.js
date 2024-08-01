@@ -12,7 +12,7 @@ import {
   updateDoc,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 
-import { auth, db } from "./config.js";
+import { auth, db } from "config.js";
 
 //Firestore some cdn
 
